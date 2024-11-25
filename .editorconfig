@@ -1,0 +1,12 @@
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+
+[*.{ats,cts,mts,ts,js,json,tsx,jsx}]
+charset = utf-8
+indent_style = space
+indent_size = 4
+ij_visual_guides = 200

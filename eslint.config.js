@@ -5,29 +5,38 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
-  { ignores: ['dist'] },
-  {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-        parserOptions: {
-            project: ['./tsconfig.node.json', './tsconfig.app.json'],
-            tsconfigRootDir: import.meta.dirname,
+    {ignores: ['dist']},
+    {
+        extends: [
+            js.configs.recommended,
+            ...tseslint.configs.recommended,
+        ],
+        files: ['**/*.{ts,tsx}'],
+        languageOptions: {
+            ecmaVersion: 2020,
+            globals: globals.browser,
+            parserOptions: {
+                project: [
+                    './tsconfig.node.json',
+                    './tsconfig.app.json',
+                ],
+                tsconfigRootDir: import.meta.dirname,
+            },
+        },
+        plugins: {
+            'react-hooks': reactHooks,
+            'react-refresh': reactRefresh,
+        },
+        rules: {
+            ...reactHooks.configs.recommended.rules,
+            'react-refresh/only-export-components': ['warn', {allowConstantExport: true}],
+            'semi': 'error',
+            'quotes': ['error', 'single'],
+            'no-console': 'warn',
+            'no-unused-vars': 'warn',
+            'indent': ['error', 4],
+            'no-multi-spaces': 'error',
         },
     },
-    plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
-    rules: {
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-    },
-  },
 )
 
