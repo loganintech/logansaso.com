@@ -1,7 +1,8 @@
-import {Box} from '@mantine/core';
+import { Box } from '@mantine/core';
+import { FC } from 'react';
 
-export const Intro = () => {
-    return <Box>
-        Hi I'm logan
-    </Box>;
+export const Intro: FC = () => {
+  return <Box>
+    Hi I'm logan
+  </Box>;
 };

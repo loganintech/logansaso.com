@@ -8,5 +8,5 @@ insert_final_newline = true
 [*.{ats,cts,mts,ts,js,json,tsx,jsx}]
 charset = utf-8
 indent_style = space
-indent_size = 4
+indent_size = 2
 ij_visual_guides = 200
