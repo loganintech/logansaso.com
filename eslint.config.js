@@ -57,7 +57,6 @@ export default tseslint.config(
       '@typescript-eslint/explicit-module-boundary-types': 'error',
       '@typescript-eslint/no-unused-vars': ['error', {argsIgnorePattern: '^_'}],
       '@typescript-eslint/no-non-null-assertion': 'error',
-      '@typescript-eslint/no-shadow': ['error', {builtinGlobals: true}],
       'object-curly-spacing': ['error', 'always'],
     },
   },

@@ -1,6 +1,6 @@
 import { Stack } from '@mantine/core';
-import { Intro } from 'introduction.tsx';
 import { FC } from 'react';
+import { Intro } from 'src/introduction.tsx';
 
 
 const App: FC = () => {
